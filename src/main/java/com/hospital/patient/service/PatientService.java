@@ -38,7 +38,7 @@ public class PatientService {
 
         String n = names
                 .stream()
-                .filter(i -> i == name )
+                .filter(i -> i.equals(name)  )
                 .findAny()
                 .orElse("Not Found");
         Patient p = new Patient();

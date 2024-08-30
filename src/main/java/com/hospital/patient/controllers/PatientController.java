@@ -24,13 +24,13 @@ public class PatientController {
         return patientService.printAllNames(); // Ensure this is a valid view name
     }
 //    @GetMapping("/find-name")
-//    public String findName() {
-//        return patientService.findName("Rashed"); // Ensure this is a valid view name
+//    public String findName(@RequestParam String name) {
+//        return patientService.findName(name); // Ensure this is a valid view name
 //    }
 
     @GetMapping("/find-name-json")
-    public ResponseEntity findNameJson() {
-        return ResponseEntity.ok(patientService.findName("Rashed"));
+    public ResponseEntity findNameJson(@RequestParam String name) {
+        return ResponseEntity.ok(patientService.findName(name));
     }
     @GetMapping("/get-patients")
     public ResponseEntity getPatients() {
