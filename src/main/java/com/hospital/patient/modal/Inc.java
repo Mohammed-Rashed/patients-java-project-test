@@ -9,6 +9,7 @@ import java.util.UUID;
 //@Getter // for getter methods
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder // for build properties
 public class Inc {
 
     private UUID id;

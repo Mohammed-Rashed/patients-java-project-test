@@ -13,11 +13,17 @@ public class IncController {
 
     @GetMapping("get-patient-info")
         public Inc getPatientInc(){
-            Inc c = new Inc();
-            c.setId(UUID.randomUUID());
-            c.setPatientName("Rashed");
-            c.setIncNo(1234);
-            return c;
+//            Inc c = new Inc();
+//            c.setId(UUID.randomUUID());
+//            c.setPatientName("Rashed");
+//            c.setIncNo(1234);
+
+        //use builder from lombok
+          return  Inc.builder()
+                    .patientName("Rashed")
+                    .IncNo(1234)
+                    .id(UUID.randomUUID())
+                    .build();
         }
 
 }
